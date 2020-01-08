@@ -1,0 +1,15 @@
+@mixin letter-spacing($spacing) {
+  letter-spacing: ($spacing / 1000) * 1em;
+}
+
+.text {
+	margin: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-family: sans-serif;
+	@include letter-spacing(-50);
+	
+	&--secondary {
+		@include letter-spacing(200);
+	}
+}
